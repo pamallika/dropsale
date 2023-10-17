@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ImportController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('import', [ImportController::class, 'randomUsersImport']);
+Route::get('users', [UserController::class, 'index']);
